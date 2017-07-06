@@ -45,6 +45,8 @@ https://courses.engr.illinois.edu/ece390/resources/opcodes.html
 
 #define TEXTLEN 256
 
+using std::;
+
 char *p,*auxp,str[TEXTLEN],sdata[TEXTLEN], numero[17],cmdbin[35],fnameIn[25],codigo[1000],coddata[500];
 int  cdatabytes=0,idata=0,jmp,line,numbytes=0;
 bool zona1,zona2,zona3,zona4,zona5,zona6,zona7,estruct = false;
@@ -143,6 +145,8 @@ t_cmddata cmddata[] = {     //Opcodes
     {"XOR",rw,rw,"0011001111"},
 
     {"INT",ib,nn,"11001101"},
+
+    {"CMP",},
 
     {NULL,nn,nn,NULL}
 };
@@ -890,3 +894,5 @@ int main(int argc,char *argv[])
 
     return 0;
 }
+
+// http://www.cplusplus.com/forum/general/21215/
